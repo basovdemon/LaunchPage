@@ -96,6 +96,7 @@ h2.section-title {
 
 p.section-subtitle {
     font-size: 18px;
+    z-index: 8888;
 }
 
 p.section-subtitle.white {
@@ -165,6 +166,7 @@ iframe {
     color: #fff;
     max-width: 600px;
     text-align: center;
+    z-index: 9999;
 }
 
 .red {
@@ -367,7 +369,104 @@ li > a.discover-btn:hover {
 /* ========================================================== */
 /* 			                03. FOOTER                        */
 /* ========================================================== */
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 
+.footer {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    padding: 40px 0 20px 0;
+    background-color: #fafbfc;
+}
+
+.footer p {
+    margin-bottom: 5px;
+    line-height: 24px;
+    color: #454545;
+}
+
+.footer p > a {
+    font-size: 17px;
+    color: #e52f37;
+    text-decoration: underline;
+}
+
+.footer p > a:hover {
+    color: #e52f37;
+    text-decoration: underline;
+}
+
+span.template-name {
+    font-weight: bold;
+}
+
+a.footer-links {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 2px;
+    color: #454545;
+}
+
+a.footer-links:hover {
+    color: #e52f37;
+    text-decoration: underline;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Footer Social Icons */
+ul.footer_social {
+    float: right;
+}
+
+ul.footer_social li {
+    display: inline-block;
+    margin: 0;
+    line-height: 100% !important;
+}
+
+ul.footer_social li a i {
+    display: inline-block;
+    margin: 0 8px;
+    padding: 0;
+    font-size: 26px !important;
+    line-height: 26px !important;
+    color: #1e90ff;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+}
+
+ul.footer_social li a i.fa-twitter {
+    color: #4099ff;
+}
+
+ul.footer_social li a i.fa-pinterest {
+    color: #c92228;
+}
+
+ul.footer_social li a i.fa-facebook-square {
+    color: #3b5998;
+}
+
+ul.footer_social li a i.fa-instagram {
+    color: #8a3ab9;
+}
+
+ul.footer_social li a i.fa-skipe {
+    color: #00aff0;
+}
+
+ul.footer_social li a i.fa-dribble {
+    color: #ea4c89;
+}
+
+ul.footer_social li a i:hover {
+    color: #e52f37 !important;
+}
 /* ========================================================== */
 /* 			               04. HOME                           */
 /* ========================================================== */
@@ -521,9 +620,9 @@ li > a.discover-btn:hover {
         margin: 10px 25px 10px 0;
         max-height: 40px;
     }
-    .image-shadow {
+    /* .image-shadow {
         max-height: 350px;
-    }
+    } */
 }
 
 /*************************SECTION-GRAY*************************************/
@@ -599,6 +698,8 @@ li > a.discover-btn:hover {
 .image-shadow {
     border-radius: 8px 8px;
     box-shadow: 10px 12px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: fit-content;
 }
 
 .btn-red {
@@ -634,6 +735,7 @@ li > a.discover-btn:hover {
     display: inline-block;
     font-size: 16px;
     padding: 14px 20px;
+    z-index: 8888;
 }
 
 /* c) Benefits List */
@@ -712,6 +814,7 @@ ul.benefits.white li i {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-gap: 7px;
+    max-width: 1400px;
 }
 
 .gallery__item--1 {
@@ -765,7 +868,8 @@ ul.benefits.white li i {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+    column-gap: 20px;
 }
 
 .form-column {
@@ -776,7 +880,7 @@ ul.benefits.white li i {
 }
 
 .contact-form-wrapper {
-    margin-top: 25px;
+    margin: 15px;
 }
 
 .contact-form-wrapper h3 {
@@ -910,7 +1014,7 @@ p.contact_success_box {
     flex-direction: column; */
     display: block;
     padding: 10px 25px 30px 25px;
-    max-width: 400px;
+    max-width: 350px;
     min-width: 200px;
 }
 
@@ -927,6 +1031,7 @@ p.contact_success_box {
     -ms-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
     transition: all 0.25s ease-in-out;
+    /* max-height: 230px; */
 }
 
 .team-item h3 {
