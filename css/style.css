@@ -219,6 +219,7 @@ iframe {
 .section-white {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: #fff;
@@ -241,6 +242,7 @@ iframe {
 
 .header-nav {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     font-size: 28px;
@@ -334,8 +336,16 @@ li > a.discover-btn:hover {
 .navbar-brand:hover {
     color: #e52f37;
 }
+.navbar-nav > li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+}
 
 .navbar-nav > li > a {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
     color: #071e55;
     font-size: 17px !important;
     line-height: 30px !important;
@@ -467,14 +477,14 @@ li > a.discover-btn:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px 0 20px 20px;
+    padding: 10px 0 10px 20px;
     background-color: #fff;
 }
 
 .partners img.partners {
     opacity: 0.4;
-    max-height: 3%;
-    max-width: 10%;
+    /* max-height: 3%;
+    max-width: 10%; */
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -ms-transition: all 0.25s ease-in-out;
@@ -494,6 +504,16 @@ li > a.discover-btn:hover {
     line-height: 78px;
 }
 
+@media (max-width: 600px) {
+    .partners img.partners {
+        margin: 10px 25px 10px 0;
+        max-height: 40px;
+    }
+    .image-shadow {
+        max-height: 350px;
+    }
+}
+
 /*************************SECTION-GRAY*************************************/
 
 .section-grey-head {
@@ -503,17 +523,23 @@ li > a.discover-btn:hover {
 
 .services-flex {
     display: flex;
+    flex-wrap: wrap;
     width: 60%;
     flex-direction: row;
     justify-content: space-around;
 }
 
 .main-services {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-content: center;
     position: relative;
     margin: 10px 5px;
     overflow: hidden;
     text-align: center;
-    width: 25%;
+    width: 170px;
     transition: all 1s;
 }
 
@@ -528,8 +554,8 @@ li > a.discover-btn:hover {
     padding: 16px 16px;
     font-size: 40px;
     line-height: 46px;
-    /* width: 75px;
-    height: 75px; */
+    width: 50px;
+    height: 50px;
     text-align: center;
     color: #fff;
     border-radius: 20px;
@@ -554,7 +580,8 @@ li > a.discover-btn:hover {
     display: flex;
     flex-direction: column;
     margin-left: 3%;
-    max-width: 27%;
+    padding-top: 20px;
+    max-width: 500px;
 }
 
 .image-shadow {
@@ -629,6 +656,10 @@ ul.benefits.white li i {
 }
 
 /* ----- e) Dropcaps Features ----- */
+/* .nav-pills {
+    max-width: 300px;
+} */
+
 .nav-pills .nav-link {
     margin-bottom: 10px;
 }
@@ -662,6 +693,61 @@ ul.benefits.white li i {
     transition: all 1s;
 }
 
+/************************* grid-container *********************/
+.gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 7px;
+}
+
+.gallery__item--1 {
+    grid-column: 1;
+    grid-row: 1;
+}
+.gallery__item--2 {
+    grid-column: 1;
+    grid-row: 2;
+}
+.gallery__item--3 {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+.gallery__item--4 {
+    grid-column: 3;
+    grid-row: 1;
+}
+.gallery__item--5 {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.gallery__item {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__img:hover {
+    width: 94%;
+    height: 94%;
+    transition: all 0.7s;
+}
+
+@media (max-width: 1000px) {
+    .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /*************************responsive-tabs*************************************/
 .dropcaps-circle.blue {
     color: #1e90ff;
@@ -678,7 +764,7 @@ ul.benefits.white li i {
 .features-second {
     margin: 20px;
     border-radius: 0.25rem;
-    width: 70%;
+    /* width: 70%; */
 }
 
 .features-second h4 {
@@ -715,6 +801,8 @@ ul.benefits.white li i {
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 .responsive-tabs {
@@ -727,25 +815,24 @@ ul.benefits.white li i {
 
 .responsive-tabs .flex-tabs {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 
 .responsive-tabs .flex-tabs .tab {
-    /* flex-grow: 1; */
-    /* max-height: 40px; */
+    display: flex;
 }
 
 .responsive-tabs .flex-tabs .panel {
     padding: 10px;
     /* min-height: 300px; */
     display: none;
-    /* width: 100%; */
+    /* width: 300px; */
     flex-basis: auto;
 }
 
 .responsive-tabs .tab {
-    width: 600px;
     border-radius: 10px;
     margin: 4px;
 }
@@ -767,7 +854,7 @@ ul.benefits.white li i {
 #tab-two:checked ~ .tabs #tab-two-panel,
 #tab-three:checked ~ .tabs #tab-three-panel,
 #tab-four:checked ~ .tabs #tab-four-panel {
-    display: block;
+    display: flex;
 }
 /* Make it responsive by changing the flex-direction and order in the CSS media queries. */
 
