@@ -230,7 +230,6 @@ iframe {
 
 .section-white {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -255,7 +254,6 @@ iframe {
 .header-nav {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-around;
     font-size: 28px;
     text-decoration: none;
@@ -369,33 +367,29 @@ li > a.discover-btn:hover {
 /* ========================================================== */
 /* 			                03. FOOTER                        */
 /* ========================================================== */
-.footer-row {
+
+footer {
+    position: relative;
+    overflow: hidden;
     display: flex;
-    flex-direction: row;
+    padding: 40px 0 20px 0;
+    background-color: #fafbfc;
     justify-content: space-around;
 }
 
-.footer {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    padding: 40px 0 20px 0;
-    background-color: #fafbfc;
-}
-
-.footer p {
+footer p {
     margin-bottom: 5px;
     line-height: 24px;
     color: #454545;
 }
 
-.footer p > a {
+footer p > a {
     font-size: 17px;
     color: #e52f37;
     text-decoration: underline;
 }
 
-.footer p > a:hover {
+footer p > a:hover {
     color: #e52f37;
     text-decoration: underline;
 }
@@ -582,7 +576,6 @@ ul.footer_social li a i:hover {
 
 .partners {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -608,7 +601,6 @@ ul.footer_social li a i:hover {
 }
 
 .partners-title {
-    display: flex;
     align-items: center;
     text-align: center;
     font-size: 18px;
@@ -627,25 +619,14 @@ ul.footer_social li a i:hover {
 
 /*************************SECTION-GRAY*************************************/
 
-.section-grey-head {
-    display: flex;
-    margin-bottom: 10px;
-}
-
 .services-flex {
     display: flex;
     flex-wrap: wrap;
-    width: 60%;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    column-gap: 50px;
 }
 
 .main-services {
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-content: center;
     position: relative;
     margin: 10px 5px;
     overflow: hidden;
@@ -670,10 +651,10 @@ ul.footer_social li a i:hover {
     text-align: center;
     color: #fff;
     border-radius: 20px;
-    background-color: #e52f37;
+    /* background-color: #e52f37; */
 }
 
-.main-services.red i {
+/* .main-services.red i {
     background-color: #e52f37;
 }
 
@@ -683,13 +664,23 @@ ul.footer_social li a i:hover {
 
 .main-services.green i {
     background-color: #27b36a;
+} */
+
+.blue {
+    background-color: #1e90ff;
+}
+
+.green {
+    background-color: #27b36a;
+}
+
+.red {
+    background-color: #e52f37;
 }
 
 /*************************SECTION-WHITE*************************************/
 
 .section-white-text {
-    display: flex;
-    flex-direction: column;
     margin-left: 3%;
     padding-top: 20px;
     max-width: 500px;
@@ -764,15 +755,10 @@ ul.benefits.white li i {
     color: #fff;
 }
 /*************************nav-pills*************************************/
-.flex-row {
-    display: flex;
-    flex-direction: row;
-}
-
 /* ----- e) Dropcaps Features ----- */
-/* .nav-pills {
-    max-width: 300px;
-} */
+.nav-pills {
+    max-width: 550px;
+}
 
 .nav-pills .nav-link {
     margin-bottom: 10px;
@@ -866,7 +852,6 @@ ul.benefits.white li i {
 /************************* Contact Us *************************************/
 .form-row {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 20px;
@@ -1004,7 +989,6 @@ p.contact_success_box {
 /************************* Meet Our Team *************************************/
 .team-items {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
@@ -1071,7 +1055,6 @@ p.contact_success_box {
 
 .btn-block {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
 
@@ -1155,6 +1138,7 @@ p.contact_success_box {
 
 .features-second p {
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 .dropcaps-circle {
@@ -1198,7 +1182,6 @@ p.contact_success_box {
 .responsive-tabs .flex-tabs {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
 }
 
@@ -1230,6 +1213,7 @@ p.contact_success_box {
 #tab-four:checked ~ .tabs #tab-four-label {
     background-color: #fff;
     cursor: default;
+    max-width: 550px;
 }
 
 #tab-one:checked ~ .tabs #tab-one-panel,
@@ -1237,6 +1221,7 @@ p.contact_success_box {
 #tab-three:checked ~ .tabs #tab-three-panel,
 #tab-four:checked ~ .tabs #tab-four-panel {
     display: flex;
+    max-width: 550px;
 }
 /* Make it responsive by changing the flex-direction and order in the CSS media queries. */
 
